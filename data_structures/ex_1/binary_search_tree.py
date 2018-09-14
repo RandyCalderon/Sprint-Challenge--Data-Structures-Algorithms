@@ -12,10 +12,19 @@ class BinarySearchTree:
       self.right.depth_first_for_each(cb)   
 
   def breadth_first_for_each(self, cb):
-    queue = []
+    queue = [self]
+
+    while len(queue):
+      node_value = queue.pop(0)
+
+      if node_value.left:
+        queue.append(node_value.left)
+      if node_value.right:
+        queue.append(node_value.right)
+      
+      cb(node_value.value)
     
-    
-    pass
+      
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)

@@ -1,1 +1,3 @@
-Add your answers to the Algorithms exercises here.
+a) o(n)
+b) o(n³)
+c) o(cⁿ)
